@@ -19,7 +19,16 @@
 	</div>
 	<script type="text/javascript">
 		var colours= ["#134E93", "#46ACF4", "#A9352D", "#048711", "#663EA9", "#A9352D", "#FB7F00", "#7F1714", "#C41F6C", "#40975A"];
-		document.body.style.backgroundColor = colours[Math.floor(Math.random()*colours.length)];
+		var current=0;
+		function changeBG(){
+			var next=Math.floor(Math.random()*colours.length);
+			while(current==next){
+				next=Math.floor(Math.random()*colours.length);
+			}
+			document.body.style.backgroundColor = colours[next];
+			current=next;
+		}
+		var interval = setInterval(changeBG, 2000);
 	</script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
