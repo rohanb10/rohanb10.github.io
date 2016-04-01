@@ -1,8 +1,8 @@
 body{
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.1em;
-	transition: background-color 1s ease;
-	-webkit-transition: background-color 1s ease;
+	transition: background-color 1s linear;
+	-webkit-transition: background-color 1s linear;
 	background-color: #134E93;
 	color: #FFFFFF;
 }
